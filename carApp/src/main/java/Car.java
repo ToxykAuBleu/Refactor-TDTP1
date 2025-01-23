@@ -3,6 +3,10 @@ public class Car {
     private String color;
     private int speed;
 
+    private static final int MAX_SPEED = 120;
+    private static final int MIN_SPEED = 0;
+    private static final int INCREMENT_SPEED = 10;
+
     public Car(String model, String color) {
         this.model = model;
         this.color = color;
@@ -14,8 +18,8 @@ public class Car {
     }
 
     public void accelererate() {
-        if (speed + 10 <= 120) {
-            speed += 10;
+        if (speed + INCREMENT_SPEED <= MAX_SPEED) {
+            speed += INCREMENT_SPEED;
             // Print details
             System.out.println("Modèle : " + model);
             System.out.println("Couleur : " + color);
@@ -26,8 +30,8 @@ public class Car {
     }
 
     public void slowdown() {
-        if (speed - 10 >= 0) {
-            speed -= 10;
+        if (speed - INCREMENT_SPEED >= MIN_SPEED) {
+            speed -= INCREMENT_SPEED;
             // Print details
             System.out.println("Modèle : " + model);
             System.out.println("Couleur : " + color);
