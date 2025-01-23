@@ -3,12 +3,12 @@ public class App {
         Car maVoiture = new Car("Sedan", "Bleu");
         Driver moi = new Driver("John", 20);
 
-        moi.startCar(maVoiture);
+        maVoiture.startCar(moi);
         maVoiture.accelererate();
-        moi.changeSpeed(maVoiture, 80);
+        maVoiture.changeSpeed(moi, 80);
         maVoiture.slowdown();
-        moi.changeSpeed(maVoiture,30);
-        moi.stopCar(maVoiture);
+        maVoiture.changeSpeed(moi, 30);
+        maVoiture.stopCar(moi);
         System.out.println("fini");
     }
 }
